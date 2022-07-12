@@ -1,0 +1,23 @@
+//Import font
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700;900&display=swap');
+
+//Import main styles
+
+@import './reset';
+@import './global';
+
+//Import components
+
+@import './standart_block';
+@import './text_block';
+@import './infographic_block';
+@import './price_block';
+@import './set_block';
+@import './set_block';
+@import './infographic_round_block';
+@import './full_video_block';
+@import './animation';
+
+//import custom styles
+@import './custom';

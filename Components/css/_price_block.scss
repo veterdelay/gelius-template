@@ -1,0 +1,115 @@
+.price_block{
+
+    display:flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h4{
+        font-size:48px;
+        margin-bottom:20px;
+        z-index:2;
+
+        @media (max-width:$breakpoint992){
+            font-size:40px;
+        }
+
+
+        @media (max-width:$breakpoint768){
+            font-size:36px;
+            margin-bottom:10px;
+        }
+
+        @media (max-width:$breakpoint400){
+            font-size:32px;
+            margin-bottom:10px;
+        }
+    }
+
+    .price_block_grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(31%, 1fr));
+        grid-auto-rows: 1fr;
+        gap:30px 30px;
+    
+        @media(max-width:$breakpoint992){
+            grid-template-columns: repeat(auto-fill,minmax(47%, 1fr)); 
+        }
+    
+        @media(max-width:$breakpoint768){
+            grid-template-columns: repeat(auto-fill,minmax(100%, 1fr)); 
+        }
+    
+        .price_block_item{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+    
+            .price_block_item_photo{
+                height:300px;
+                width:300px;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                padding:15px;
+    
+                .price_block_item_image{
+                    height: 100%;
+
+                    img{
+                        object-fit: cover;
+                        height: 100%;
+                        width: auto;
+                        z-index:1;
+                    }
+
+                }
+            }
+    
+            .price_block_item_info{
+                display:flex;
+                flex-direction: column;
+                gap:20px;
+                z-index:2;
+                padding:15px;
+                text-align: center;
+
+                h5{
+                    font-size:24px;
+                }
+
+                .price_block_item_button{
+                    padding:17px 60px;
+                    width:100%;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    z-index:2;
+                    text-align: center;
+    
+                    &.background-secondary{
+                        color:$primaryColor;
+                    }
+    
+                    &.background-main{
+                        color:$primaryColor;
+                    }
+    
+                    &.border-button-secondary{
+                        border:2px solid $secondaryColor;
+                    }
+        
+                    &:hover{
+                        background-color:$primaryColor;
+                        color:$mainColor !important; 
+                    }
+        
+                    @media (max-width:$breakpoint768){
+                        width:100%;
+                    }
+        
+                }
+            }
+    
+        }
+    }
+}
