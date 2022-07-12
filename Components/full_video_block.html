@@ -1,0 +1,31 @@
+<!-- 
+
+recomended video desktop size - 1280x720px;
+recomended video tablet or smartphone size - 800x450px;
+smartphone video use mp4/webm format and low quality;
+desktop only webm;
+
+use .section_nopadding in <section>;
+
+.color-primary and etc in h5 - edit title color;
+
+    
+ -->
+
+ <div class="full_video_block">
+    <div class="full_video_block_info section_container">
+        <h5 class="color-primary">СМОТРЕТЬ ОБЗОР</h5>
+        <svg width="512px" height="512px" fill="#fff" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+            <path d="M133,440a35.37,35.37,0,0,1-17.5-4.67c-12-6.8-19.46-20-19.46-34.33V111c0-14.37,7.46-27.53,19.46-34.33a35.13,35.13,0,0,1,35.77.45L399.12,225.48a36,36,0,0,1,0,61L151.23,434.88A35.5,35.5,0,0,1,133,440Z"/>
+        </svg>
+    </div>
+    <div class="full_video_block_cover"></div>
+    <video class="full_video_block_desktop_video pre-video" autoplay muted loop playsinline>
+        <source src="/image/catalog/webp/index-pro/video/video.webm" type="video/webm">
+    </video>
+    <video class="full_video_block_mobile_tablet_video pre-video" autoplay muted loop playsinline>
+        <source src="/image/catalog/webp/index-pro/video/video_smartph.webm" type="video/webm">
+        <source src="/image/catalog/webp/index-pro/video/video_smartph.mp4" type="video/mp4">
+    </video>
+    <iframe class="video-iframe" style="height: 100% !important;" src="https://www.youtube.com/embed/CdiyBHK3Hpc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
