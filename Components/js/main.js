@@ -7,10 +7,10 @@ $(document).ready(function(){
         let actualPrice = $('.mb-6 ins:first-child').not('.uah').text();
         let actualPriceNodiscount = $('.ololo').text();
 
-        if(actualPriceNodiscount == ''){
-            $(this).html(actualPrice.substring(0,actualPrice.indexOf('.'))+' UAH');
+        if(actualPrice == ''){
+            $(this).html(actualPriceNodiscount + ' UAH');
         }else{
-            $(this).html(actualPriceNodiscount.substring(0,actualPriceNodiscount.indexOf('.'))+' UAH');
+            $(this).html(actualPrice);
         }
     });
 });
