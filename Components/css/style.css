@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap");
 /* Full width content custom & reset default width*/
 .container {
   width: 100%;
@@ -96,12 +96,10 @@ main#content #product .row .col-xl-12 .mx-md-6 {
     padding-left: 15px !important;
     padding-right: 15px !important;
   }
-
   .tab-pane:not([itemprop=description]) {
     padding-left: 30px !important;
     padding-right: 30px !important;
   }
-
   main#content #product .row .col-xl-12 ~ .container {
     padding-left: 30px !important;
     padding-right: 30px !important;
@@ -348,6 +346,14 @@ button {
   .text_block .text_content .text_content_item {
     width: 100%;
   }
+}
+.text_block .text_content .text_content_item p {
+  margin-bottom: -10px;
+  padding: 0px !important;
+  font-size: 18px;
+  font-family: "Roboto" !important;
+  line-height: 1 !important;
+  font-weight: 700 !important;
 }
 .text_block .text_content .text_content_item h4 {
   font-size: 48px;
@@ -1057,17 +1063,35 @@ button {
   align-items: center;
   text-align: center;
 }
+@media (max-width: 767.98px) {
+  .infographic_round_block .infographic_round_block_item .infographic_round_block_item_icon {
+    width: 80px;
+    height: 80px;
+  }
+}
 .infographic_round_block .infographic_round_block_item .infographic_round_block_item_icon svg {
   width: 80px;
   height: 80px;
   text-align: center;
   margin: auto;
 }
+@media (max-width: 767.98px) {
+  .infographic_round_block .infographic_round_block_item .infographic_round_block_item_icon svg {
+    width: 50px;
+    height: 50px;
+  }
+}
 .infographic_round_block .infographic_round_block_item .infographic_round_block_item_icon img {
   width: 80px;
   height: 80px;
   text-align: center;
   margin: auto;
+}
+@media (max-width: 767.98px) {
+  .infographic_round_block .infographic_round_block_item .infographic_round_block_item_icon img {
+    width: 50px;
+    height: 50px;
+  }
 }
 .infographic_round_block .infographic_round_block_item .infographic_round_block_item_body {
   display: flex;
