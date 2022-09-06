@@ -1,0 +1,469 @@
+.image_and_dots_block{
+    width: 100%;
+    height:auto; 
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    h4{
+        text-align: center;
+        margin-bottom:10px;
+        font-size:48px;
+        z-index:2;
+        
+        @media (max-width:$breakpoint992){
+            font-size:40px;
+        }
+
+
+        @media (max-width:$breakpoint768){
+            font-size:36px;
+            margin-bottom:10px;
+        }
+
+        @media (max-width:$breakpoint400){
+            font-size:32px;
+            margin-bottom:10px;
+        }
+    }
+    .image_and_dots_subtitle{
+        text-align: center;
+        font-size:28px;
+        font-weight:700;
+        margin-bottom: 20px;
+
+        @media (max-width:$breakpoint768){
+            font-size:24px;
+        }
+
+        @media (max-width:$breakpoint400){
+            font-size:22px;
+        }
+
+    }
+
+
+    .image_and_dots_img{
+        position:relative;
+        height: fit-content;
+        width: fit-content;
+
+        //Отступ в зависимости от высоты точек;
+        margin: 0px 0px 40px 0px;
+
+        @media(max-width:$breakpoint768){
+            margin: 80px 0px 40px 0px;
+        }
+
+        img{
+            max-width:600px !important;
+            z-index:1;
+            @media(max-width:$breakpoint768){
+                max-width:300px !important;
+            }
+            @media(max-width:319px){
+                max-width:100% !important;
+            }
+        }
+
+        .big_decore_dot{
+            z-index: -1;
+            width: 500px;
+            height: 500px;
+            background: transparent;
+            border: 3px solid $mainColor;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: auto;
+            bottom: 0;
+            margin: auto;
+            border-radius: 50%;
+            transform: scale(0.6);
+            opacity:0.8;
+            animation: 1.6s infinite slideinBig;
+
+            @media(max-width:$breakpoint768){
+                width: 300px;
+                height: 300px; 
+            }
+
+        }
+
+        .dot{
+            position:absolute;
+            width:auto;
+            height:auto;
+            z-index:2;
+            @media(max-width:319px){
+                display:none;
+            }
+
+            .dot_indicator{
+                width:40px;
+                height:40px;
+                background:$mainColor;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: 400;
+                font-size:19px;
+                color:#fff;
+                border-radius: 50%;
+                cursor: pointer;
+                &::after{
+                    content: "";
+                    width: 25px;
+                    height: 25px;
+                    background: transparent;
+                    border: 2px solid $mainColor;
+                    z-index: 2;
+                    position: absolute;
+                    margin: auto;
+                    border-radius: 50%;
+                    transform: scale(1);
+                    opacity:1;
+                    animation: 0.9s infinite slidein;
+                }
+                span{
+                    position: absolute;
+                    z-index:3;
+                }
+
+            }
+
+            .dot_feature{
+                position: absolute;
+                span{
+                    white-space: nowrap;
+                    text-transform: uppercase;
+                    font-size: 18px;
+                    font-weight: 400;
+                    color:$mainColor;
+                    line-height: 1;
+                    opacity:0;
+                    transition:all 0.6s;
+                }
+            }
+        }
+
+        ///////////////////////dot1
+
+        .dot1{
+            bottom: 201px;
+            left: -3px;
+            @media(max-width:$breakpoint768){
+                bottom: 110px;
+                left: 5px;
+            }
+            .dot_indicator{
+                &::before{
+                    width: 0px;
+                    height: 3px;
+                    content: "";
+                    background: $mainColor;
+                    z-index: 2;
+                    position: absolute;
+                    right: 0;
+                    cursor: default;
+                    transition:all 0.6s;
+                    @media(max-width:$breakpoint768){
+                        width: 0px;
+                        left:0; 
+                    }
+                }
+            }
+            .dot_feature{
+                right: -20px;
+                left:auto;
+                top: -200px;
+                width: fit-content;
+
+                &::after{
+                    opacity:0;
+                    width: 10px;
+                    height: 10px;
+                    content: "";
+                    background: $mainColor;
+                    z-index: 1;
+                    border-radius: 50%;
+                    position: absolute;
+                    right: 0;
+                    left:0;
+                    margin:0px auto;
+                    top: 29px;
+                    transition:all 0.6s;
+                }
+
+
+                &::before{
+                    width: 3px;
+                    height: 0px;
+                    content: "";
+                    background: $mainColor;
+                    z-index: 1;
+                    position: absolute;
+                    right: 0;
+                    left:0;
+                    margin:0px auto;
+                    top: 29px;
+                    transition:all 0.6s;
+                }
+
+                @media(max-width:$breakpoint768){
+                    right: 0px;
+                    left:0px;
+                    top: -250px;
+                }
+            }
+
+            &.dot_active{
+                .dot_indicator{
+                    &::before{
+                        width: 67px;
+                        @media(max-width:$breakpoint768){
+                            width: 87px;
+                        }
+                    }
+                }
+                .dot_feature{
+                    span{
+                        opacity:1; 
+                    }
+                    &::after{
+                        opacity:1;
+                    }
+                    &::before{
+                        height: 193px;
+                        @media(max-width:$breakpoint768){
+                            height: 242px;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        ///////////////////////dot2
+    
+        .dot2{
+            bottom: 114px;
+            left: 226px;
+            @media(max-width:$breakpoint768){
+                bottom: 57px;
+                left: 131px;
+            }
+            .dot_indicator{
+                &::before{
+                    width: 0px;
+                    height: 3px;
+                    content: "";
+                    background: $mainColor;
+                    z-index: 2;
+                    position: absolute;
+                    left: 0;
+                    cursor: default;
+                    transition:all 0.6s;
+                    @media(max-width:$breakpoint768){
+                        width: 0px;
+                        left:0; 
+                    }
+                }
+            }
+            .dot_feature{
+                right: -211px;
+                left:auto;
+                top: 172px;
+                width: fit-content;
+
+                &::after{
+                    opacity:0;
+                    width: 10px;
+                    height: 10px;
+                    content: "";
+                    background: $mainColor;
+                    z-index: 1;
+                    border-radius: 50%;
+                    position: absolute;
+                    right: 0;
+                    left:0;
+                    margin:0px auto;
+                    top: -22px;
+                    transition:all 0.6s;
+                }
+
+
+                &::before{
+                    width: 3px;
+                    height: 0px;
+                    content: "";
+                    background: $mainColor;
+                    z-index: 1;
+                    position: absolute;
+                    right: 0;
+                    left:0;
+                    margin:0px auto;
+                    top: -150px;
+                    transition:all 0.6s;
+
+                    @media(max-width:$breakpoint768){
+                        top: -103px;
+                    }
+
+                }
+
+                @media(max-width:$breakpoint768){
+                    right: 0px;
+                    left: -40px;
+                    top: 122px;
+                }
+            }
+
+            &.dot_active{
+                .dot_indicator{
+                    &::before{
+                        width: 161px;
+                        @media(max-width:$breakpoint768){
+                            width: 52px;
+                        }
+                    }
+                }
+                .dot_feature{
+                    span{
+                        opacity:1; 
+                    }
+                    &::after{
+                        opacity:1;
+                    }
+                    &::before{
+                        height: 128px;
+                        @media(max-width:$breakpoint768){
+                            height: 91px;
+                        }
+                    }
+                }
+            }
+
+        }
+
+
+        ///////////////////////dot3
+    
+        .dot3{
+            bottom: 436px;
+            left: 266px;
+            @media(max-width:$breakpoint768){
+                bottom: 253px;
+                left: 152px;
+            }
+            .dot_indicator{
+                &::before{
+                    width: 0px;
+                    height: 3px;
+                    content: "";
+                    background: $mainColor;
+                    z-index: 2;
+                    position: absolute;
+                    left: 0;
+                    cursor: default;
+                    transition:all 0.6s;
+                    @media(max-width:$breakpoint768){
+                        width: 0px;
+                        left:0; 
+                    }
+                }
+            }
+            .dot_feature{
+                right: -130px;
+                left:auto;
+                top: -115px;
+                width: fit-content;
+
+                &::after{
+                    opacity:0;
+                    width: 10px;
+                    height: 10px;
+                    content: "";
+                    background: $mainColor;
+                    z-index: 1;
+                    border-radius: 50%;
+                    position: absolute;
+                    right: 0;
+                    left:0;
+                    margin:0px auto;
+                    top: 29px;
+                    transition:all 0.6s;
+                }
+
+
+                &::before{
+                    width: 3px;
+                    height: 0px;
+                    content: "";
+                    background: $mainColor;
+                    z-index: 1;
+                    position: absolute;
+                    right: 0;
+                    left:0;
+                    margin:0px auto;
+                    top: 29px;
+                    transition:all 0.6s;
+                }
+
+                @media(max-width:$breakpoint768){
+                    right: 0px;
+                    left: -43px;
+                    top: -161px;
+                }
+            }
+
+            &.dot_active{
+                .dot_indicator{
+                    &::before{
+                        width: 78px;
+                        @media(max-width:$breakpoint768){
+                            width: 51px;
+                        }
+                    }
+                }
+                .dot_feature{
+                    span{
+                        opacity:1; 
+                    }
+                    &::after{
+                        opacity:1;
+                    }
+                    &::before{
+                        height: 106px;
+                        @media(max-width:$breakpoint768){
+                            height: 153px;
+                        }
+                    }
+                }
+            }
+
+        }
+        
+
+
+    }
+
+}
+
+///////////////////////indicator animation
+@keyframes slidein { 
+    0% { transform: scale(1);
+    opacity:1; } 
+    100% { transform: scale(2.4);
+     opacity:0;
+    }  
+}
+
+@keyframes slideinBig { 
+    0% { transform: scale(0.6);
+    opacity:0.8; } 
+    100% { transform: scale(1.2);
+     opacity:0;
+    }  
+}

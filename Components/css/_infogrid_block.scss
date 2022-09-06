@@ -1,0 +1,57 @@
+.infogrid_block{
+    width: 100%;
+    min-height:300px;
+    height:auto; 
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(31%, 1fr));
+    gap:30px 30px;
+
+    @media(max-width:$breakpoint1200){
+        grid-template-columns: repeat(auto-fill,minmax(100%, 1fr)); 
+    }
+
+    .infogrid_item{
+        display:flex;
+        flex-direction: column;
+        gap:30px;
+        justify-content: flex-start;
+
+        .infogrid_item_row{
+            display:flex;
+            gap:10px;
+
+            .infogrid_item_icon{
+                width:45px;
+                height:45px;
+                flex-shrink: 0;
+                svg{
+                    width:45px;
+                    height:45px;
+                }
+            }
+            .infogrid_item_content{
+                display:flex;
+                flex-direction: column;
+                gap:10px;
+                h5{
+                    font-size:24px;
+                }
+                span{
+                    font-size:16px;
+                }
+            }
+        }
+    }
+
+    .infogrid_item_image{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media(max-width:$breakpoint1200){
+            margin:20px auto;
+        }
+    }
+
+}
