@@ -215,8 +215,14 @@ button {
 .sections .background-secondary {
   background-color: #070707;
 }
+.sections .background-other {
+  background-color: #f9f9f9;
+}
 .sections .color-main {
   color: #ffd403;
+}
+.sections .color-other {
+  color: #f9f9f9;
 }
 .sections .color-primary {
   color: #fff;

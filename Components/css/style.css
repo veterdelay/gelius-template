@@ -215,8 +215,14 @@ button {
 .sections .background-secondary {
   background-color: #070707;
 }
+.sections .background-other {
+  background-color: #f9f9f9;
+}
 .sections .color-main {
   color: #ffd403;
+}
+.sections .color-other {
+  color: #f9f9f9;
 }
 .sections .color-primary {
   color: #fff;
@@ -1245,68 +1251,4 @@ button {
     opacity: 1;
     transform: translateY(0px);
   }
-}
-#decor1 {
-  position: absolute;
-  top: 0;
-  right: 80%;
-  z-index: 1;
-}
-
-#decor2 {
-  position: absolute;
-  bottom: 20%;
-  left: 65%;
-  z-index: 1;
-}
-
-#decor3 {
-  position: absolute;
-  top: 0;
-  right: 50%;
-  z-index: 1;
-}
-
-#decor4 {
-  position: absolute;
-  bottom: 0;
-  left: 35%;
-  z-index: 1;
-}
-
-.infografic_icon {
-  border: 2px solid #ffd403;
-}
-
-.infographic_block_item {
-  border: 2px solid #ffd403;
-}
-
-.final_decor {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: 0px auto;
-}
-
-.standard_block_custom {
-  min-height: 300px;
-}
-
-.set_block_products {
-  border: 2px solid #ffd403;
-  padding: 15px;
-}
-
-.set_block_decor {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  max-width: 100%;
-  margin: auto;
 }

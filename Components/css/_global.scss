@@ -108,8 +108,16 @@ $breakpoint400: 399.98 + px;
         background-color:$secondaryColor;
     }
 
+    .background-other{
+        background-color:$otherColor;
+    }
+
     .color-main{
         color:$mainColor;
+    }
+
+    .color-other{
+        color:$otherColor;
     }
 
     .color-primary{
