@@ -1,0 +1,167 @@
+.infotabs_block{
+    min-height:300px;
+    height:auto;
+    position: relative;
+    width: 100%;
+    display:flex;
+    font-family: 'Roboto';
+    .infotabs_container{
+        display:flex;
+        gap:50px;
+
+        @media(max-width:$breakpoint992){
+            flex-direction: column;
+            gap:20px;
+        }
+
+
+        .infotabs_triggers{
+            width:25%;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 15px 15px 15px rgb(0 0 0 / 3%);
+            h5{
+                font-size:28px;
+                margin-bottom:40px;
+                padding:10px 10px 0px 0px;
+                @media(max-width:$breakpoint768){
+                    margin-bottom:30px;       
+                }
+            }
+            .infotabs_trigger{
+                font-weight: 700;
+                font-size:16px;
+                cursor:pointer;
+                padding: 10px 10px 10px 0px;
+                line-height: 1;
+                color:$secondaryColor;
+                opacity:0.8;
+                border-right:4px solid transparent;
+                transition:all 0.1s;
+                @media(max-width:$breakpoint992){
+                    border-right:none;
+                    border-bottom:4px solid transparent;
+                    padding: 10px 0px 10px 0px;
+                    margin-right: 20px;
+                }
+                @media(max-width:500px){
+                    width:150px;
+                }
+                @media(max-width:400px){
+                    width:120px;
+                }
+                &.infotabs-trigger-active{
+                    border-right:4px solid $mainColor;
+                    color:$mainColor;
+                    opacity:1;
+                    @media(max-width:$breakpoint992){
+                        border-right:none;
+                        border-bottom:4px solid $mainColor;
+                    }
+                }
+            }
+
+            @media(max-width:$breakpoint1200){
+                width:35%;
+            }
+
+            @media(max-width:$breakpoint992){
+                width:100%;
+                flex-direction: row;
+                flex-wrap: wrap;
+                box-shadow: none;
+            }
+
+        }
+        .infotabs_items{
+            width:75%;
+            display: flex;
+            align-items: flex-start;
+            position:relative;
+            .infotabs_item{
+                position: absolute;
+                top:0;
+                left:0;
+                right:0;
+                margin:0px auto;
+                opacity:0;
+                width: 100%;
+                height: auto;
+                display:flex;
+                flex-direction: column;
+                gap:20px;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                transition: all 0.6s;
+                .infotabs_image{
+                    height: 500px;
+                    width: auto;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    @media(max-width:$breakpoint1200){
+                        height:400px;
+                    }
+                    @media(max-width:$breakpoint768){
+                        height:250px;       
+                    }
+                    img{
+                        max-height:100%;
+                        width:auto;
+                    }
+                }
+                span{
+                    font-size: 16px;
+                    color:$secondaryColor;
+                }
+                &.infotabs-active{
+                    opacity:1;
+                }
+                @media(max-width:$breakpoint768){
+                    align-items: flex-start;
+                    text-align: left;    
+                }
+            }
+            @media(max-width:$breakpoint1200){
+                width:65%;
+            }
+            @media(max-width:$breakpoint992){
+                width:100%;
+            }
+        }
+
+        &.infotabs-horizontal{
+           flex-direction: column; 
+           gap:30px;
+           @media(max-width:$breakpoint992){
+                gap:20px;
+            }
+           .infotabs_triggers,
+           .infotabs_items{
+            width:100%;
+           }
+           .infotabs_triggers{
+            width:100%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            box-shadow: none;
+            h5{
+                width:100%;
+            }
+            .infotabs_trigger{
+                border-right:none;
+                border-bottom:4px solid transparent;
+                padding: 10px 0px 10px 0px;
+                margin-right: 20px;
+                &.infotabs-trigger-active{
+                        border-right:none;
+                        border-bottom:4px solid $mainColor;
+                    
+                }
+            }
+           }
+
+        }
+    }
+}
